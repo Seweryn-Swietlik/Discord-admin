@@ -10,8 +10,6 @@ endpoint: get: discord/members
 
 ```javascript
 class FindAllMembersDto {
-  @IsNotEmpty()
-  @IsString()
   guildId: string;
 }
 ```
@@ -28,12 +26,7 @@ endpoint: post: discord/members
 
 ```javascript
 class InviteMemberDto {
-  @IsNotEmpty()
-  @IsString()
   guildId: string;
-
-  @IsNotEmpty()
-  @IsString()
   channelId: string;
 }
 ```
@@ -56,12 +49,7 @@ endpoint: delete: discord/members
 
 ```javascript
 class DeleteMemberDto {
-  @IsNotEmpty()
-  @IsString()
   guildId: string;
-
-  @IsNotEmpty()
-  @IsString()
   memberToDeleteId: string;
 }
 ```

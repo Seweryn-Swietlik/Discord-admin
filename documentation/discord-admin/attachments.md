@@ -10,8 +10,6 @@ endpoint: post: discord/attachments
 
 ```javascript
 class AttachmentsDto {
-  @IsNotEmpty()
-  @IsString()
   guildId: string;
 }
 ```
@@ -28,8 +26,6 @@ endpoint: get: discord/attachments
 
 ```javascript
 class AttachmentsDto {
-  @IsNotEmpty()
-  @IsString()
   guildId: string;
 }
 ```

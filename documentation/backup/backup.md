@@ -18,14 +18,9 @@ endpoint: post: backup/restore
 
 ```javascript
 class RestoreGuildDto {
-  @IsNotEmpty()
-  @IsString()
   backupId: string;
 
-  @IsNotEmpty()
-  @IsString()
-  clientSecret: string; //A unique client key that allows automatic restoration of the server. We can find client secret at https://discord.com/developers/applications
-}
+  clientSecret: string;         //A unique client key that allows automatic restoration of the server. We can find client secret at https://discord.com/developers/applications
 ```
 
 Output: returns information 'Server has been restored';
@@ -40,8 +35,6 @@ endpoint: post: backup/create
 
 ```javascript
 class CarateGuildBackupDto {
-  @IsNotEmpty()
-  @IsString()
   guildId: string;
 }
 ```

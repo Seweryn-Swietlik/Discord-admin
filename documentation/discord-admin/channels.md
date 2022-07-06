@@ -10,8 +10,6 @@ endpoint: get: discord/channels
 
 ```javascript
 class GetAllCategoriesDto {
-  @IsNotEmpty()
-  @IsString()
   guildId: string;
 }
 ```
@@ -32,12 +30,7 @@ endpoint: post: discord/channels/add-category
 
 ```javascript
 class AddChannelCategoryDto {
-  @IsNotEmpty()
-  @IsString()
   guildId: string;
-
-  @IsNotEmpty()
-  @IsString()
   name: string;
 }
 ```
@@ -60,18 +53,12 @@ endpoint: post: discord/channels
 
 ```javascript
 class AddChannelDto {
-  @IsNotEmpty()
-  @IsString()
   guildId: string;
 
-  @IsNotEmpty()
-  @IsString()
   name: string;
 
-  @IsNotEmpty()
   channelType: ChannelType;
 
-  @IsString()
   categoryId?: string;
 }
 
@@ -97,16 +84,10 @@ endpoint: patch: discord/channels
 
 ```javascript
 class EditChannelDto {
-  @IsNotEmpty()
-  @IsString()
   guildId: string;
 
-  @IsNotEmpty()
-  @IsString()
   channelId: string;
 
-  @IsNotEmpty()
-  @IsString()
   name: string;
 }
 ```
@@ -129,12 +110,8 @@ endpoint: delete: discord/channels
 
 ```javascript
 class DeleteChannelDto {
-  @IsNotEmpty()
-  @IsString()
   guildId: string;
 
-  @IsNotEmpty()
-  @IsString()
   channelId: string;
 }
 ```

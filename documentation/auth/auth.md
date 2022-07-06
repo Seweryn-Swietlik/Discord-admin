@@ -10,27 +10,13 @@ endpoint: post: auth/sing-up
 
 ```javascript
 class SignUpDto {
-  @IsNotEmpty()
-  @IsString()
   username: string;
 
-  @IsString()
-  @MinLength(4)
-  @MaxLength(20)
-  @Matches(/((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/, {
-    message:
-      'Password length should be between four and twenty. Password should contain at least one upper case letter, one lower case letter and one number or special character',
-  })
   password: string;
 
-  @IsNotEmpty()
-  @IsString()
   botToken: string; //bot token that has been added or can be added to the user server. We can find the token at https://discord.com/developers/applications
 
-  @IsNotEmpty()
-  @IsString()
-  clientId: string;
-  string; //client id needed to add bot to server or restore server. We can find client id at https://discord.com/developers/applications
+  clientId: string; //client id needed to add bot to server or restore server. We can find client id at https://discord.com/developers/applications
 }
 ```
 

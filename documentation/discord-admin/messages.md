@@ -4,17 +4,13 @@
 
 Lists all messages from the specified guild.
 
-endpoint: get: discord/messages/guild
+endpoint: get: 'discord/messages/guild'
 
 ##### Input payload
 
 ```javascript
 class FindMessagesInGuildDto {
-  @IsNotEmpty()
-  @IsString()
   guildId: string;
-
-  @IsNotEmpty()
   phrase: string | number;
 }
 ```
@@ -41,21 +37,14 @@ type AuthorProperties = {
 
 Lists all messages from the specified channel.
 
-endpoint: get: discord/messages/channel
+endpoint: get: 'discord/messages/channel'
 
 ##### Input payload
 
 ```javascript
 class FindMessageInChannelDto {
-  @IsNotEmpty()
-  @IsString()
   guildId: string;
-
-  @IsNotEmpty()
-  @IsString()
   channelId: string;
-
-  @IsNotEmpty()
   phrase: string | number;
 }
 ```
@@ -82,22 +71,14 @@ type AuthorProperties = {
 
 Adds a message to the given channel.
 
-endpoint: post: discord/messages
+endpoint: post: 'discord/messages'
 
 ##### Input payload
 
 ```javascript
 class AddMessageDto {
-  @IsNotEmpty()
-  @IsString()
   guildId: string;
-
-  @IsNotEmpty()
-  @IsString()
   channelId: string;
-
-  @IsNotEmpty()
-  @IsString()
   message: string;
 }
 ```
@@ -114,26 +95,15 @@ type AddMessageOutputPayload = {
 
 Edit messages from selected channel based on id.
 
-endpoint: patch: discord/messages
+endpoint: patch: 'discord/messages'
 
 ##### Input payload
 
 ```javascript
 class EditMessageDto {
-  @IsNotEmpty()
-  @IsString()
   guildId: string;
-
-  @IsNotEmpty()
-  @IsString()
   channelId: string;
-
-  @IsNotEmpty()
-  @IsString()
   messageId: string;
-
-  @IsNotEmpty()
-  @IsString()
   message: string;
 }
 ```
@@ -150,22 +120,14 @@ type EditMessagePayload = {
 
 Delete messages from selected channel based on id.
 
-endpoint: delete: discord/messages
+endpoint: delete: 'discord/messages'
 
 ##### Input payload
 
 ```javascript
 class DeleteMessageDto {
-  @IsNotEmpty()
-  @IsString()
   guildId: string;
-
-  @IsNotEmpty()
-  @IsString()
   channelId: string;
-
-  @IsNotEmpty()
-  @IsString()
   messageId: string;
 }
 ```

@@ -65,8 +65,6 @@ endpoint: get: discord/guilds/guild
 
 ```javascript
 class DisplayGuildPropertiesDto {
-  @IsNotEmpty()
-  @IsString()
   guildId: string;
 }
 ```
