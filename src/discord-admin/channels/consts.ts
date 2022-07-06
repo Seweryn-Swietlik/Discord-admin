@@ -1,0 +1,3 @@
+export const DISCORD_CHANNEL_TEXT_TYPE = 0;
+export const DISCORD_CHANNEL_VOICE_TYPE = 2;
+export const DISCORD_CHANNEL_CATEGORY_TYPE = 4;
