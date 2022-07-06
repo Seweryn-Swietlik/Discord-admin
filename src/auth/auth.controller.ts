@@ -38,13 +38,13 @@ export class AuthController {
   }
 
   @Get('redirect')
-  async discordLoginRedirect() {
+  discordLoginRedirect() {
     return 'The bot has been added correctly';
   }
 
   @UseGuards(LocalAuthGuard)
   @Post('log-in')
-  async login(@Req() req: Request) {
+  login(@Req() req: Request) {
     const user = req.user as User;
     this.botsRegistry.createBot(user);
     return this.authService.login(req.user);

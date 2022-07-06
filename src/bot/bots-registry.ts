@@ -1,11 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { User } from 'src/models/User';
+import { ActiveBot } from './types';
 import { Bot } from './bot';
-
-type ActiveBot = {
-  userId: string;
-  bot: Bot;
-};
 
 @Injectable()
 export class BotsRegistry {
