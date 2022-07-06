@@ -54,11 +54,8 @@ endpoint: post: discord/channels
 ```javascript
 class AddChannelDto {
   guildId: string;
-
   name: string;
-
   channelType: ChannelType;
-
   categoryId?: string;
 }
 
@@ -85,9 +82,7 @@ endpoint: patch: discord/channels
 ```javascript
 class EditChannelDto {
   guildId: string;
-
   channelId: string;
-
   name: string;
 }
 ```
@@ -111,7 +106,6 @@ endpoint: delete: discord/channels
 ```javascript
 class DeleteChannelDto {
   guildId: string;
-
   channelId: string;
 }
 ```

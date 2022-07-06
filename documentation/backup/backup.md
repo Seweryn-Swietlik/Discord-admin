@@ -19,7 +19,6 @@ endpoint: post: backup/restore
 ```javascript
 class RestoreGuildDto {
   backupId: string;
-
   clientSecret: string;         //A unique client key that allows automatic restoration of the server. We can find client secret at https://discord.com/developers/applications
 ```
 
