@@ -38,6 +38,7 @@ class SignUpDto {
 During login the bot is created and added to the array of active bots. After a successful login using the authorization guard we receive an access token.
 
 ```javascript
+class AuthController {
   @UseGuards(LocalAuthGuard)
   @Post('log-in')
   login(@Req() req: Request) {
@@ -45,11 +46,13 @@ During login the bot is created and added to the array of active bots. After a s
     this.botsRegistry.createBot(user);
     return this.authService.login(req.user);
   }
+}
 ```
 
 Thanks to the access token every time the method is called we find the right bot from the array using the user id. This allows any user to use the application.
 
 ```javascript
+class MembersService {
   async inviteMember(
     inviteMemberDto: InviteMemberDto,
     userId: string,
@@ -65,6 +68,7 @@ Thanks to the access token every time the method is called we find the right bot
       throw new NotFoundException();
     }
   }
+}
 ```
 
 More detailed documentation: https://github.com/Seweryn-Swietlik/Discord-admin/tree/main/documentation
