@@ -71,4 +71,6 @@ class MembersService {
 }
 ```
 
+<blockquote class="imgur-embed-pub" lang="en" data-id="HU7Jirv"><a href="https://imgur.com/HU7Jirv">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
 More detailed documentation: https://github.com/Seweryn-Swietlik/Discord-admin/tree/main/documentation
