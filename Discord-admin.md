@@ -71,6 +71,5 @@ class MembersService {
 }
 ```
 
-https://i.imgur.com/HU7Jirv.png
 
 More detailed documentation: https://github.com/Seweryn-Swietlik/Discord-admin/tree/main/documentation
